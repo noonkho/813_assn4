@@ -1,4 +1,4 @@
-(define (domain metal_detector)
+(define (domain metal_detector_before)
 
 (:requirements :strips :typing :negative-preconditions)
 

@@ -1,6 +1,6 @@
-(define (problem 3x3_grid) 
+(define (problem 3x3_grid_before) 
 
-(:domain metal_detector)
+(:domain metal_detector_before)
 (:init
     ;Initial Belief States
     (and
