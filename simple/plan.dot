@@ -1,0 +1,33 @@
+digraph contingent_plan {
+  _nil [style="invis"];
+  10 [label="move l11 l21"];
+  7 [label="move l11 l12"];
+  3 [label="dig l11 strong gold1"];
+  5 [label="dig l11 strong gold1"];
+  2 [label="sensor-scan__sensor__-obs0 l11 empty gold2"];
+  8 [label="dig l12 strong gold2"];
+  9 [label="Goal!",peripheries=2];
+  11 [label="move l21 l31"];
+  1 [label="move l21 l11"];
+  12 [label="move l31 l32"];
+  0 [label="move l31 l21"];
+  13 [label="dig l32 strong gold2"];
+  14 [label="Goal!",peripheries=2];
+  4 [label="kresponse(l11, empty, gold",shape="box"];
+  6 [label="knresponse(l11, empty, gold",shape="box"];
+  0 -> 1;
+  1 -> 2;
+  2 -> 4;
+  4 -> 3;
+  2 -> 6;
+  6 -> 5;
+  5 -> 7;
+  7 -> 8;
+  8 -> 9;
+  3 -> 10;
+  10 -> 11;
+  11 -> 12;
+  12 -> 13;
+  13 -> 14;
+  _nil -> 0 [label=""];
+}

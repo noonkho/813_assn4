@@ -1,4 +1,4 @@
-(define (domain metal_detector_before)
+(define (domain metal_detector)
 
 (:requirements :strips :typing :negative-preconditions)
 
@@ -14,13 +14,12 @@
 
 (:predicates
     (metalLoc ?l1 - location ?g1 - metal ?l2 - location ?g2 - metal)
-    (response ?l - location ?s - signal ?m - metal)
-    (goldAt ?l - location ?m - metal)
+    (response ?loc - location ?s - signal ?m - metal)
+    (goldAt ?loc - location ?m - metal)
     (gold_obtained ?m - metal)
     (at ?loc - location)
     (link ?l1 ?l2 - location)
-    (equal ?o1 ?o2 - signal)
-    
+    (equal ?s1 ?s2 - signal)
 )
 
 (:action move
@@ -34,6 +33,7 @@
             (not (at ?l1))
         )
 )
+
 
 (:action scan
     :parameters (?loc - location ?s - signal ?m - metal)

@@ -37,8 +37,8 @@ signal_table = {
 #     print()
 
 
-perms = [''.join(p) for p in permutations('120000000')]
-comb = list(set(perms))
+# perms = [''.join(p) for p in permutations('120000000')]
+# comb = list(set(perms))
 # print(len(comb))
 # print(comb)
 
@@ -46,13 +46,35 @@ comb = list(set(perms))
 # (or (not (metalLoc l11 gold1 l12 gold2)) (goldAt l11 gold1))
 # (or (not (metalLoc l11 gold1 l12 gold2)) (goldAt l12 gold2))
 
-for idx, choice in enumerate(comb):
-    i_gold = [choice.find("1"), choice.find("2")]
-    string_p1 = "(metalLoc " + locs[i_gold[0]] + " gold1 " + locs[i_gold[1]] + " gold2)"
+# for idx, choice in enumerate(comb):
+#     i_gold = [choice.find("1"), choice.find("2")]
+#     string_p1 = "(metalLoc " + locs[i_gold[0]] + " gold1 " + locs[i_gold[1]] + " gold2)"
     
-    for i in range(2):
-        full_string = "(or (not " + string_p1 + ") (goldAt " + locs[i_gold[i]] + " " + golds[i] + "))"
-        print(full_string, end=" ")
+#     for i in range(2):
+#         full_string = "(or (not " + string_p1 + ") (goldAt " + locs[i_gold[i]] + " " + golds[i] + "))"
+#         print(full_string, end=" ")
+#     print()
 
-        
-    print()
+
+# (or (not (goldAt l11 gold1)) (not (goldAt l12 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l13 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l21 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l22 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l23 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l31 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l32 gold1)))
+# (or (not (goldAt l11 gold1)) (not (goldAt l33 gold1)))
+
+# gold = "gold1"
+# loc = "l11"
+
+# for gold in golds:
+#     for loc in locs:
+#         for l in locs:
+#             if l != loc:
+#                 string = "(or (not (goldAt " + loc + " " + gold + ")) (not (goldAt " + l + " " + gold + ")))"
+#                 print(string, end=" ")
+#         print()
+#     print()
+#     print()
+
