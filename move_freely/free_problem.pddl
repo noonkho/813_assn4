@@ -310,11 +310,6 @@
         (not (at l21)) (not (at l22)) (not (at l23))
         (at l31) (not (at l32)) (not (at l33))
 
-        ; Can only move to each location once
-        (never_been l11) (never_been l12) (never_been l13)
-        (never_been l21) (never_been l22) (never_been l23)
-        (not (never_been l31)) (never_been l32) (never_been l33)
-
         ; Cannot scan until the planner run setup-scan
         (not (can-scan l11)) (not (can-scan l12)) (not (can-scan l13))
         (not (can-scan l21)) (not (can-scan l22)) (not (can-scan l23))

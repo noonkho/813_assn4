@@ -20,24 +20,21 @@
     (gold_obtained ?m - metal) ; Whether or not a gold has been obtained
     (at ?loc - location) ; States positions
     (link ?l1 ?l2 - location) ; Link between two locations that can be travelled t
-    (never_been ?loc - location) ; For checking if we have been at a location already
     (succ ?n1 ?n2 - num) ; For counting
     (can-scan ?loc - location) ; Can the agent still make a scan
     (scan-count ?n - num) ; Used to limit the amount of scans that can be made
 )
 
 ;action for moving to a location that has not yet been visited
-(:action move_new_place
+(:action move
         :parameters (?l1 ?l2 - location)
         :precondition (and
             (at ?l1)
             (link ?l1 ?l2)
-            (never_been ?l2)
         )
         :effect (and
             (at ?l2)
             (not (at ?l1))
-            (not (never_been ?l2))
         )
 )
 
