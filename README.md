@@ -74,7 +74,7 @@ The following is the plan that we able to obtain:
 ![plan](plan.png)
 
 There are a few deadends either
-- the person can not longer move to another unvisited square and both golds were not obtained.
+- the person can no longer move to another unvisited square and both golds were not obtained.
 - reach the max scan number and still can't figure out where the golds are
 
 # Future work
